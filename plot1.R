@@ -29,5 +29,6 @@ pm25_list <- c(pm25_total_1999, pm25_total_2002, pm25_total_2005, pm25_total_200
 names(pm25_list) <- c("1999", "2002", "2005", "2008")
 
 ### Producing plot
+png(filename="plot1.png")
 print(barplot(pm25_list, ylim = c(0,7350000), main = "Total PM2.5 vs. Year", xlab = "Years", ylab = "Total PM2.5 emission"))
-
+dev.off()
